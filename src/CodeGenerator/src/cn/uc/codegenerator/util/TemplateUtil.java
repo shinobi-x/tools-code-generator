@@ -39,15 +39,18 @@ public class TemplateUtil {
     {
       Map<String, String> fileToPath = new HashMap<String, String>();
 
+      String rootDirCode = transferDomainToPath(dbInfo.getRootDirCode());
+      String rootDirMapper = transferDomainToPath(dbInfo.getRootDirMapper());
       String domainPath = transferDomainToPath(dbInfo.getDomain());
       String model = dbInfo.getModel();
-      fileToPath.put("/model/model.ftl", "app/" + domainPath +"/" + model + "/model/" + objectName + ".java");
-      fileToPath.put("/dto/dto.ftl", "app/" + domainPath +"/" + model + "/dto/" + objectName + "Dto.java");
-      fileToPath.put("/dto/queryDto.ftl", "app/" + domainPath +"/" + model + "/dto/" + objectName + "QueryDto.java");
-      fileToPath.put("/dao/mapper/mapper.ftl", "conf/" + domainPath +"/" + model + "/dao/mapper/" + objectName + "Mapper.xml");
-      fileToPath.put("/dao/mapper.ftl", "app/" + domainPath +"/" + model + "/dao/" + objectName + "Mapper.java");
-      fileToPath.put("/service/impl/serviceImpl.ftl", "app/" + domainPath +"/" + model + "/service/impl/" + objectName + "ServiceImpl.java");
-      fileToPath.put("/service/service.ftl", "app/" + domainPath +"/" + model + "/service/" + objectName + "Service.java");
+      
+      fileToPath.put("/model/model.ftl", rootDirCode + "/" + domainPath +"/" + model + "/model/" + objectName + ".java");
+      fileToPath.put("/dto/dto.ftl", rootDirCode + "/" + domainPath +"/" + model + "/dto/" + objectName + "Dto.java");
+      fileToPath.put("/dto/queryDto.ftl", rootDirCode + "/" + domainPath +"/" + model + "/dto/" + objectName + "QueryDto.java");
+      fileToPath.put("/dao/mapper/mapper.ftl", rootDirMapper + "/" + domainPath +"/" + model + "/dao/mapper/" + objectName + "Mapper.xml");
+      fileToPath.put("/dao/mapper.ftl", rootDirCode + "/" + domainPath +"/" + model + "/dao/" + objectName + "Mapper.java");
+      fileToPath.put("/service/impl/serviceImpl.ftl", rootDirCode + "/" + domainPath +"/" + model + "/service/impl/" + objectName + "ServiceImpl.java");
+      fileToPath.put("/service/service.ftl", rootDirCode + "/" + domainPath +"/" + model + "/service/" + objectName + "Service.java");
 
       return fileToPath;
     }

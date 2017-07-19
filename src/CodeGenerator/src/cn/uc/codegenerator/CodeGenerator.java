@@ -52,12 +52,18 @@ public class CodeGenerator {
             String database = PropertiesUtil.getProperties("jdbc.database");
             String userName = PropertiesUtil.getProperties("jdbc.userName");
             String password = PropertiesUtil.getProperties("jdbc.password");
+            
+            String rootDirCode = PropertiesUtil.getProperties("root.dir.code");
+            String rootDirMapper = PropertiesUtil.getProperties("root.dir.mapper");
             String domain = PropertiesUtil.getProperties("domain");
             String model = PropertiesUtil.getProperties("model");
             String author = PropertiesUtil.getProperties("author");
             String projectType = PropertiesUtil.getProperties("projectType");
+            
             String current = DateUtil.DateToString(new Date(), "yyyy-MM-dd HH:mm:ss");
 
+            dbInfo.setRootDirCode(rootDirCode);
+            dbInfo.setRootDirMapper(rootDirMapper);
             dbInfo.setDomain(domain);
             dbInfo.setModel(model);
             dbInfo.setAuthor(author);

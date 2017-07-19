@@ -10,6 +10,9 @@ import java.util.Date;
  * @date ${createTime}
  */
 public class ${objectName} implements Serializable {
+    
+    private static final long serialVersionUID = 1L;
+    
     <#if columnList??>
     <#list columnList as item>
     

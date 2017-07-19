@@ -4,12 +4,30 @@ import java.util.List;
 
 public class Database {
 
+    private String rootDirCode;
+    private String rootDirMapper;
     private String domain;
     private String model;
     private String author;
     private String projectType;
     private String createTime;
     private List<Table> tableList;
+
+    public String getRootDirCode() {
+        return rootDirCode;
+    }
+
+    public void setRootDirCode(String rootDirCode) {
+        this.rootDirCode = rootDirCode;
+    }
+
+    public String getRootDirMapper() {
+        return rootDirMapper;
+    }
+
+    public void setRootDirMapper(String rootDirMapper) {
+        this.rootDirMapper = rootDirMapper;
+    }
 
     /**
      * @return the domain
