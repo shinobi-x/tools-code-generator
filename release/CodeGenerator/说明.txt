@@ -1,5 +1,0 @@
-1.修改config.properties文件参数配置;
-2.点击run.bat,生成代码在target文件夹中;
-3.复制target下的文件夹覆盖工程根目录即可.
-
-注：template_*、config.properties、run.bat、CodeGenerator.jar不能删除
