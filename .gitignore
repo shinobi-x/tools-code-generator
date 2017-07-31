@@ -1,6 +1,6 @@
 *.class
-
-*/target/
+lib/
+target/
 
 *.war
 .project
