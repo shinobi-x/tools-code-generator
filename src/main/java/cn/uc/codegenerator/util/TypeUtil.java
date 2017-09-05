@@ -47,7 +47,7 @@ public class TypeUtil {
         typeToClass.put("bit", "Boolean");
         typeToClass.put("blob", "byte[]");
         typeToClass.put("char", "String");
-        typeToClass.put("datetime", "TimeStamp");
+        typeToClass.put("datetime", "Date");
         typeToClass.put("date", "Date");
         typeToClass.put("decimal", "BigDecimal");
         typeToClass.put("double", "Double");

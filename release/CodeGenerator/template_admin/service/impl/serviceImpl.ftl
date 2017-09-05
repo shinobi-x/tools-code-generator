@@ -1,6 +1,7 @@
 package ${domain}.${model}.service.impl;
 
 import java.util.List;
+import java.util.Date;
 import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import ${domain}.${model}.dao.${objectName}Mapper;
@@ -43,11 +44,16 @@ public class ${objectName}ServiceImpl implements ${objectName}Service {
     
     @Override
     public void save(${objectName} ${lobjectName}) {
+        Date currentDate = new Date();
+        ${lobjectName}.setCreateTime(currentDate);
+        ${lobjectName}.setUpdateTime(currentDate);
         ${lobjectName}Mapper.save(${lobjectName});
     }
 
     @Override
     public void update(${objectName} ${lobjectName}) {
+        Date currentDate = new Date();
+        ${lobjectName}.setUpdateTime(currentDate);
         ${lobjectName}Mapper.update(${lobjectName});
     }
 
