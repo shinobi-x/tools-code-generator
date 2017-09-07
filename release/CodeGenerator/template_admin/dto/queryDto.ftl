@@ -1,8 +1,8 @@
 package ${domain}.${model}.dto;
 
 import ${domain}.${model}.model.${objectName};
-import cn.jixunsoft.common.page.PageDto;
-import cn.jixunsoft.common.page.PageUtil;
+import com.xiaoma.framework.common.page.PageDto;
+import com.xiaoma.framework.common.page.PageUtil;
 
 /**
  * ${objectName} 查询Dto
